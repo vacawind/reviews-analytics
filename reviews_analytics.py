@@ -23,7 +23,7 @@ print("每筆留言平均長度為",average_len)
 # 	if len(line) < 100:
 # 		new.append(line)
 
-new = [line for line in data if len(line) < 100] 
+new = [line for line in data if len(line) < 100] #清單快寫法
 print("留言長度小於100個字共有",len(new),"筆資料。")
 
 
@@ -31,5 +31,10 @@ print("留言長度小於100個字共有",len(new),"筆資料。")
 # for line in data:
 # 	if "good" in line:
 # 		good.append(line)
-good = [line for line in data if "good" in line ]
+good = [line for line in data if "good" in line ] #清單快寫法
 print("留言中有提到good的字眼共有",len(good),"筆資料。")
+
+bad = ["bad" in line for line in data] #清單快寫法(進階)
+# bad = []
+# for line in data:
+# 	bad.appned("bad" in line)
