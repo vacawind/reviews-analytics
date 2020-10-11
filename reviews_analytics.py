@@ -18,15 +18,18 @@ print("檔案讀取結束，共有",len(data),"筆資料。")
 print("每筆留言平均長度為",average_len)
 
 
-new = []
-for line in data:
-	if len(line) < 100:
-		new.append(line)
+# new = []
+# for line in data:
+# 	if len(line) < 100:
+# 		new.append(line)
+
+new = [line for line in data if len(line) < 100] 
 print("留言長度小於100個字共有",len(new),"筆資料。")
 
 
-good = []
-for line in data:
-	if "good" in line:
-		good.append(line)
+# good = []
+# for line in data:
+# 	if "good" in line:
+# 		good.append(line)
+good = [line for line in data if "good" in line ]
 print("留言中有提到good的字眼共有",len(good),"筆資料。")
