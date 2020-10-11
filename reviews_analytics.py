@@ -23,3 +23,10 @@ for line in data:
 	if len(line) < 100:
 		new.append(line)
 print("留言長度小於100個字共有",len(new),"筆資料。")
+
+
+good = []
+for line in data:
+	if "good" in line:
+		good.append(line)
+print("留言中有提到good的字眼共有",len(good),"筆資料。")
